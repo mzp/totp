@@ -6,7 +6,9 @@ import PackageDescription
 let package = Package(
     name: "Totp",
     dependencies: [
-        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMinor(from: "0.8.0"))
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", .upToNextMinor(from: "0.8.0")),
+        .package(url: "https://github.com/norio-nomura/Base32.git", .upToNextMinor(from: "0.6.0")),
+
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -16,7 +18,7 @@ let package = Package(
             dependencies: ["CryptoSwift"]),
         .target(
             name: "Totp",
-            dependencies: ["TotpCore"]),
+            dependencies: ["TotpCore", "Base32"]),
         .testTarget(
             name: "TotpTests",
             dependencies: ["TotpCore"]),

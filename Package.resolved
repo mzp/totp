@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Base32",
+        "repositoryURL": "https://github.com/norio-nomura/Base32.git",
+        "state": {
+          "branch": null,
+          "revision": "8e33ed4b6d4631e711a56a6f723f6ddaf6294838",
+          "version": "0.6.0"
+        }
+      },
+      {
         "package": "CryptoSwift",
         "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
         "state": {
