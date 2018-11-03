@@ -1,5 +1,5 @@
 //
-//  TOTPGeneratorTests.swift
+//  HOTPGeneratorTests.swift
 //  TotpTests
 //
 //  Created by mzp on 2018/11/03.
@@ -9,7 +9,7 @@ import XCTest
 import struct Foundation.Date
 @testable import TotpCore
 
-class TOTPGeneratorTests: XCTestCase {
+class HOTPGeneratorTests: XCTestCase {
     var generator : HOTPGenerator!
 
     override func setUp() {
