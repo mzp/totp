@@ -8,26 +8,13 @@ import struct Foundation.Date
 import class CryptoSwift.HMAC
 
 class HOTPGenerator {
-    enum Format {
-        case dec6
-        case dec8
-
-        var intValue: Int {
-            switch self {
-            case .dec6:
-                return 6
-            case .dec8:
-                return 8
-            }
-        }
-    }
     private let hmac: HMAC
 
     init(secret : [UInt8]) {
         self.hmac = HMAC(key: secret, variant: .sha1)
     }
 
-    func generate(at count : UInt64, format: Format) -> String? {
+    func generate(at count : UInt64, format: OTPFormat) -> String? {
         guard let hash = try? hmac.authenticate(Array(uint64: count)) else {
             return nil
         }
