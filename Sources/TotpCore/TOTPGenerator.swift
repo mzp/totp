@@ -6,14 +6,14 @@
 //
 import struct Foundation.Date
 
-class TOTPGenerator {
+public final class TOTPGenerator {
     private let generator: HOTPGenerator
 
-    init(secret : [UInt8]) {
+    public init(secret : [UInt8]) {
         self.generator = HOTPGenerator(secret: secret)
     }
 
-    func generate(at date : Date, format: OTPFormat) -> String? {
+    public func generate(at date : Date, format: OTPFormat) -> String? {
         let count = UInt64(date.timeIntervalSince1970) / 30
         return generator.generate(at: count, format: format)
     }

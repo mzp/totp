@@ -5,7 +5,7 @@
 //  Created by mzp on 2018/11/03.
 //
 
-enum OTPFormat {
+public enum OTPFormat {
     case dec6
     case dec8
 
